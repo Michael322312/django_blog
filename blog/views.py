@@ -12,3 +12,14 @@ def posts_list(request):
         context=context,
         request=request
     )
+
+def view_post(request, post_id):
+    post = Post.objects.get(id=post_id)
+    context = {
+        "post": post
+    }
+    return render(
+        template_name="blog/post.html",
+        context=context,
+        request=request
+    )

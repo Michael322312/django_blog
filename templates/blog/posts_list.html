@@ -7,11 +7,12 @@
     </h2>
     <ul>
         {%for post in posts_list%}
-            <li>
-                <div style="font-size: 30px; padding: 20px;">{{post.title}}</div> 
-
-                <div style="font-size: 15px;">Upload date: {{post.published_date}}</div>
-            </li>
+            <a href="{%url 'post_details' post.id%}" target="_blank">
+                <li>
+                    <div style="font-size: 30px; padding: 20px;">{{post.title}}</div> 
+                    <div style="font-size: 15px;">Upload date: {{post.published_date}}</div>
+                </li>
+            </a>
         {%endfor%}
     </ul>
 </body>
