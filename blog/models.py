@@ -6,7 +6,6 @@ class Post(models.Model):
     content = models.TextField()
     published_date = models.DateTimeField(auto_now = True)
 
-    photo = models.FileField(upload_to="blog/media/user_post_uploads/")
 
     def __str__(self):
         return self.title
